@@ -1,0 +1,38 @@
+# Get latest news with filters
+curl "http://localhost:3000/api/news/latest?country=in&category=technology&limit=20"
+
+# Get latest business news in English
+curl "http://localhost:3000/api/news/latest?country=us&category=business&language=en&page=1&limit=10"
+
+# Get all latest news (no filters)
+curl "http://localhost:3000/api/news/latest?limit=50"
+
+# Search for specific topic
+curl "http://localhost:3000/api/news/search?q=artificial%20intelligence&limit=20"
+
+# Search with country filter
+curl "http://localhost:3000/api/news/search?q=bitcoin&country=us&page=1&limit=15"
+
+# Complex search query
+curl "http://localhost:3000/api/news/search?q=climate%20change&language=en&limit=25"
+
+# Get top 10 trending articles
+curl "http://localhost:3000/api/news/trending?limit=10"
+
+# Get top 20 trending articles
+curl "http://localhost:3000/api/news/trending?limit=20"
+
+# Get technology news
+curl "http://localhost:3000/api/news/category/technology?country=in&limit=15"
+
+# Get sports news
+curl "http://localhost:3000/api/news/category/sports?country=us&limit=20"
+
+# Get entertainment news
+curl "http://localhost:3000/api/news/category/entertainment?limit=25"
+
+# Get news from India
+curl "http://localhost:3000/api/news/country/in?category=technology&limit=20"
+
+# Get news from United States
+curl "http://localhost:3000/api/news/country/us?category=business&limit=15"
