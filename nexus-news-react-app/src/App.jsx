@@ -13,9 +13,7 @@ import {
   TrendingSection,
   NewsGrid,
   Footer,
-  SourcesModal,
 } from "./components";
-import { useRefresh } from "./hooks";
 
 /**
  * Main App Component
@@ -29,10 +27,6 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSourcesModalOpen, setIsSourcesModalOpen] = useState(false);
-
-  // Refresh Hook
-  const { isRefreshing, refreshMessage, refreshError, handleRefresh } = useRefresh();
 
   // Test API on mount
   // useEffect(() => {
@@ -165,41 +159,6 @@ export default function App() {
     }
   };
 
-  /**
-   * Handles cache refresh
-   */
-  const handleRefreshClick = async () => {
-    const success = await handleRefresh();
-    if (success) {
-      // Reload data after successful refresh
-      setLoading(true);
-      try {
-        const [latestData, trendingData] = await Promise.all([
-          getAllLatestNews(50),
-          getTrendingNews(6),
-        ]);
-
-        let filteredData = latestData;
-        if (activeTab !== "top" && activeTab !== "breaking") {
-          filteredData = latestData.filter(
-            (article) =>
-              article.category && article.category.includes(activeTab),
-          );
-        }
-
-        const formattedArticles = formatArticles(filteredData);
-        const formattedTrending = formatArticles(trendingData);
-
-        setArticles(formattedArticles);
-        setTrending(formattedTrending);
-      } catch (error) {
-        console.error("Error reloading data after refresh:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-  };
-
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-200 relative overflow-hidden">
       {/* Animated background elements */}
@@ -218,28 +177,6 @@ export default function App() {
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         onLogoClick={handleLogoClick}
-        onRefresh={handleRefreshClick}
-        isRefreshing={isRefreshing}
-        onSourcesClick={() => setIsSourcesModalOpen(true)}
-      />
-
-      {/* Refresh Notifications */}
-      {refreshMessage && (
-        <div className="fixed top-24 right-4 z-40 px-6 py-3 bg-green-900/90 border border-green-700/50 text-green-100 rounded-lg backdrop-blur-sm shadow-lg animate-fade-in">
-          {refreshMessage}
-        </div>
-      )}
-      {refreshError && (
-        <div className="fixed top-24 right-4 z-40 px-6 py-3 bg-red-900/90 border border-red-700/50 text-red-100 rounded-lg backdrop-blur-sm shadow-lg animate-fade-in">
-          {refreshError}
-        </div>
-      )}
-
-      {/* Sources Modal */}
-      <SourcesModal
-        isOpen={isSourcesModalOpen}
-        onClose={() => setIsSourcesModalOpen(false)}
-        country={activeTab === "top" || activeTab === "breaking" ? null : activeTab}
       />
 
       <MobileSidebar

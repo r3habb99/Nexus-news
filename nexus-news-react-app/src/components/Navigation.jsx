@@ -1,5 +1,5 @@
 import React from 'react';
-import { Newspaper, Search, Menu, X, Sparkles, RefreshCw, Filter } from 'lucide-react';
+import { Newspaper, Search, Menu, X, Sparkles } from 'lucide-react';
 import { CATEGORIES } from '../constants/categories';
 
 export const Navigation = ({ 
@@ -10,10 +10,7 @@ export const Navigation = ({
   handleSearch, 
   isMenuOpen, 
   setIsMenuOpen,
-  onLogoClick,
-  onRefresh = null,
-  isRefreshing = false,
-  onSourcesClick = null 
+  onLogoClick 
 }) => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-linear-to-b from-slate-950/95 via-slate-900/90 to-transparent backdrop-blur-xl border-b border-blue-500/20 shadow-2xl shadow-blue-500/10">
@@ -76,31 +73,6 @@ export const Navigation = ({
             <Search size={18} />
           </button>
         </form>
-
-        {/* Refresh and Sources Buttons */}
-        <div className="hidden lg:flex items-center gap-2 ml-4">
-          {onSourcesClick && (
-            <button
-              onClick={onSourcesClick}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-300 bg-slate-800/50 hover:bg-slate-700 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 group/btn"
-              title="Filter by sources"
-            >
-              <Filter size={16} className="group-hover/btn:text-blue-400 transition-colors" />
-              <span className="hidden xl:inline group-hover/btn:text-blue-400 transition-colors">Sources</span>
-            </button>
-          )}
-          {onRefresh && (
-            <button
-              onClick={onRefresh}
-              disabled={isRefreshing}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 group/btn shadow-lg shadow-blue-500/20"
-              title="Refresh news cache"
-            >
-              <RefreshCw size={16} className={`${isRefreshing ? 'animate-spin' : 'group-hover/btn:rotate-180 transition-transform duration-500'}`} />
-              <span className="hidden xl:inline">Refresh</span>
-            </button>
-          )}
-        </div>
 
         <button 
           className="md:hidden text-slate-400 p-2.5 hover:bg-slate-800/50 rounded-xl transition-all duration-300 hover:text-white" 
