@@ -7592,3 +7592,20 @@
 {"level":"info","message":"💳 Estimated Daily API Credits:","newsApiOrg":{"estimated":16,"limit":100,"remaining":84},"newsDataIo":{"estimated":24,"limit":200,"remaining":176},"timestamp":"2026-04-13 11:09:37"}
 {"level":"info","message":"🔍 Checking database for existing articles...","timestamp":"2026-04-13 11:09:37"}
 {"count":117,"level":"info","message":"✓ Database already contains articles","timestamp":"2026-04-13 11:09:37"}
+{"host":"hidden","level":"info","message":"Attempting MongoDB connection...","timestamp":"2026-04-13 14:48:46"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established","port":27017,"readyState":1,"timestamp":"2026-04-13 14:48:46"}
+{"database":"news_db","level":"info","message":"MongoDB connection opened","timestamp":"2026-04-13 14:48:46"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established successfully","readyState":1,"timestamp":"2026-04-13 14:48:46"}
+{"level":"info","message":"Server is running in development mode on port 3000","timestamp":"2026-04-13 14:48:46"}
+{"level":"info","message":"API Documentation: http://localhost:3000/","timestamp":"2026-04-13 14:48:46"}
+{"level":"info","message":"Starting News Fetch Scheduler...","timestamp":"2026-04-13 14:48:46"}
+{"level":"info","message":"🕐 Starting News Fetch Scheduler","schedules":5,"timestamp":"2026-04-13 14:48:46","timezone":"Asia/Kolkata"}
+{"description":"Early morning fetch - General & Breaking news","level":"info","message":"✓ Scheduled: EARLY_MORNING","time":"0 6 * * *","timestamp":"2026-04-13 14:48:46"}
+{"description":"Morning fetch - Business & Technology news","level":"info","message":"✓ Scheduled: MORNING","time":"0 9 * * *","timestamp":"2026-04-13 14:48:46"}
+{"description":"Afternoon fetch - Entertainment & Sports","level":"info","message":"✓ Scheduled: AFTERNOON","time":"0 13 * * *","timestamp":"2026-04-13 14:48:46"}
+{"description":"Evening fetch - Health & Science news","level":"info","message":"✓ Scheduled: EVENING","time":"0 18 * * *","timestamp":"2026-04-13 14:48:46"}
+{"description":"Night fetch - Latest updates & Politics","level":"info","message":"✓ Scheduled: NIGHT","time":"0 22 * * *","timestamp":"2026-04-13 14:48:46"}
+{"level":"info","message":"📅 Fetch Schedule Overview:","times":[{"description":"Early morning fetch - General & Breaking news","name":"EARLY_MORNING","time":"0 6 * * *"},{"description":"Morning fetch - Business & Technology news","name":"MORNING","time":"0 9 * * *"},{"description":"Afternoon fetch - Entertainment & Sports","name":"AFTERNOON","time":"0 13 * * *"},{"description":"Evening fetch - Health & Science news","name":"EVENING","time":"0 18 * * *"},{"description":"Night fetch - Latest updates & Politics","name":"NIGHT","time":"0 22 * * *"}],"timestamp":"2026-04-13 14:48:46"}
+{"level":"info","message":"💳 Estimated Daily API Credits:","newsApiOrg":{"estimated":16,"limit":100,"remaining":84},"newsDataIo":{"estimated":24,"limit":200,"remaining":176},"timestamp":"2026-04-13 14:48:46"}
+{"level":"info","message":"🔍 Checking database for existing articles...","timestamp":"2026-04-13 14:48:46"}
+{"count":117,"level":"info","message":"✓ Database already contains articles","timestamp":"2026-04-13 14:48:46"}
