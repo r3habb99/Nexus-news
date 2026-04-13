@@ -1,5 +1,5 @@
-import React from 'react';
-import { Newspaper, Search, Menu, X, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Newspaper, Search, Menu, X, Sparkles, ChevronDown } from 'lucide-react';
 import { CATEGORIES } from '../constants/categories';
 
 export const Navigation = ({ 
@@ -12,6 +12,16 @@ export const Navigation = ({
   setIsMenuOpen,
   onLogoClick 
 }) => {
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+
+  const handleCategorySelect = (catId) => {
+    setActiveTab(catId);
+    setSearchQuery('');
+    setIsCategoryOpen(false);
+  };
+
+  const activeCategoryLabel = CATEGORIES.find(cat => cat.id === activeTab && !searchQuery)?.label || 'Categories';
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-linear-to-b from-slate-950/95 via-slate-900/90 to-transparent backdrop-blur-xl border-b border-blue-500/20 shadow-2xl shadow-blue-500/10">
       <div className="absolute inset-0 bg-linear-to-r from-blue-600/5 via-purple-600/5 to-blue-600/5 opacity-50"></div>
@@ -35,28 +45,62 @@ export const Navigation = ({
           </div>
         </div>
 
-        {/* Scrollable categories for medium to large screens */}
-        <div className="hidden md:flex items-center gap-2 flex-1 max-w-xl mx-4 overflow-x-auto scrollbar-hide">
-          <div className="flex items-center gap-2 px-2">
-            {CATEGORIES.map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => { setActiveTab(cat.id); setSearchQuery(''); }}
-                className={`relative flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-300 group/btn whitespace-nowrap ${
-                  activeTab === cat.id && !searchQuery 
-                    ? 'text-white bg-linear-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-500/30 scale-105' 
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-                }`}
-              >
-                <span className={`transition-transform duration-300 ${activeTab === cat.id && !searchQuery ? 'scale-110' : 'group-hover/btn:scale-110'}`}>
-                  {cat.icon}
-                </span>
-                {cat.label}
-                {activeTab === cat.id && !searchQuery && (
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-linear-to-r from-transparent via-blue-400 to-transparent"></div>
-                )}
-              </button>
-            ))}
+        {/* Categories for medium to large screens - 3 visible + dropdown */}
+        <div className="hidden md:flex items-center gap-2 mx-4">
+          {/* First 3 categories as individual buttons */}
+          {CATEGORIES.slice(0, 3).map(cat => (
+            <button
+              key={cat.id}
+              onClick={() => { setActiveTab(cat.id); setSearchQuery(''); }}
+              className={`relative flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-300 group/btn whitespace-nowrap ${
+                activeTab === cat.id && !searchQuery 
+                  ? 'text-white bg-linear-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-500/30 scale-105' 
+                  : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+              }`}
+            >
+              <span className={`transition-transform duration-300 ${activeTab === cat.id && !searchQuery ? 'scale-110' : 'group-hover/btn:scale-110'}`}>
+                {cat.icon}
+              </span>
+              {cat.label}
+              {activeTab === cat.id && !searchQuery && (
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-linear-to-r from-transparent via-blue-400 to-transparent"></div>
+              )}
+            </button>
+          ))}
+
+          {/* Dropdown for remaining categories */}
+          <div className="relative group">
+            <button
+              onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+              className="relative flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-300 text-slate-400 hover:text-white hover:bg-slate-800/50 group-hover:bg-slate-800/50"
+            >
+              More
+              <ChevronDown 
+                size={16} 
+                className={`transition-transform duration-300 ${isCategoryOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+            
+            {isCategoryOpen && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-slate-900/95 border border-slate-700/50 rounded-xl backdrop-blur-sm shadow-2xl z-50">
+                <div className="max-h-80 overflow-y-auto py-2">
+                  {CATEGORIES.slice(3).map(cat => (
+                    <button
+                      key={cat.id}
+                      onClick={() => handleCategorySelect(cat.id)}
+                      className={`w-full flex items-center gap-3 px-4 py-2.5 text-left transition-all duration-200 ${
+                        activeTab === cat.id && !searchQuery 
+                          ? 'bg-linear-to-r from-blue-600/40 to-indigo-600/40 text-white' 
+                          : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+                      }`}
+                    >
+                      <span className="text-lg">{cat.icon}</span>
+                      <span className="text-sm font-medium">{cat.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
