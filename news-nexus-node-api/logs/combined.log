@@ -7381,3 +7381,197 @@
 {"level":"warn","message":"Scheduler is not running","timestamp":"2026-02-22 09:00:01"}
 {"level":"info","message":"MongoDB disconnection already in progress","timestamp":"2026-02-22 09:00:01"}
 {"error":"EIO: i/o error, write","level":"error","message":"Uncaught exception detected","stack":"Error: EIO: i/o error, write\n    at writeSync (node:fs:924:3)\n    at SyncWriteStream._write (node:internal/fs/sync_write_stream:27:5)\n    at writeOrBuffer (node:internal/streams/writable:572:12)\n    at _write (node:internal/streams/writable:501:10)\n    at Writable.write (node:internal/streams/writable:510:10)\n    at Console.log (/home/ad.rapidops.com/rishabh.prajapati/Desktop/Learning/Test/node_modules/winston/lib/winston/transports/console.js:87:23)\n    at Console._write (/home/ad.rapidops.com/rishabh.prajapati/Desktop/Learning/Test/node_modules/winston-transport/modern.js:103:17)\n    at doWrite (/home/ad.rapidops.com/rishabh.prajapati/Desktop/Learning/Test/node_modules/readable-stream/lib/_stream_writable.js:390:139)\n    at writeOrBuffer (/home/ad.rapidops.com/rishabh.prajapati/Desktop/Learning/Test/node_modules/readable-stream/lib/_stream_writable.js:381:5)\n    at Writable.write (/home/ad.rapidops.com/rishabh.prajapati/Desktop/Learning/Test/node_modules/readable-stream/lib/_stream_writable.js:302:11)","timestamp":"2026-02-22 09:00:01"}
+{"host":"hidden","level":"info","message":"Attempting MongoDB connection...","timestamp":"2026-04-13 09:49:06"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established","port":27017,"readyState":1,"timestamp":"2026-04-13 09:49:06"}
+{"database":"news_db","level":"info","message":"MongoDB connection opened","timestamp":"2026-04-13 09:49:06"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established successfully","readyState":1,"timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"Server is running in development mode on port 3000","timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"API Documentation: http://localhost:3000/","timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"Starting News Fetch Scheduler...","timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"🕐 Starting News Fetch Scheduler","schedules":5,"timestamp":"2026-04-13 09:49:06","timezone":"Asia/Kolkata"}
+{"description":"Early morning fetch - General & Breaking news","level":"info","message":"✓ Scheduled: EARLY_MORNING","time":"0 6 * * *","timestamp":"2026-04-13 09:49:06"}
+{"description":"Morning fetch - Business & Technology news","level":"info","message":"✓ Scheduled: MORNING","time":"0 9 * * *","timestamp":"2026-04-13 09:49:06"}
+{"description":"Afternoon fetch - Entertainment & Sports","level":"info","message":"✓ Scheduled: AFTERNOON","time":"0 13 * * *","timestamp":"2026-04-13 09:49:06"}
+{"description":"Evening fetch - Health & Science news","level":"info","message":"✓ Scheduled: EVENING","time":"0 18 * * *","timestamp":"2026-04-13 09:49:06"}
+{"description":"Night fetch - Latest updates & Politics","level":"info","message":"✓ Scheduled: NIGHT","time":"0 22 * * *","timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"📅 Fetch Schedule Overview:","times":[{"description":"Early morning fetch - General & Breaking news","name":"EARLY_MORNING","time":"0 6 * * *"},{"description":"Morning fetch - Business & Technology news","name":"MORNING","time":"0 9 * * *"},{"description":"Afternoon fetch - Entertainment & Sports","name":"AFTERNOON","time":"0 13 * * *"},{"description":"Evening fetch - Health & Science news","name":"EVENING","time":"0 18 * * *"},{"description":"Night fetch - Latest updates & Politics","name":"NIGHT","time":"0 22 * * *"}],"timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"💳 Estimated Daily API Credits:","newsApiOrg":{"estimated":16,"limit":100,"remaining":84},"newsDataIo":{"estimated":24,"limit":200,"remaining":176},"timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"🔍 Checking database for existing articles...","timestamp":"2026-04-13 09:49:06"}
+{"level":"info","message":"📭 Database is empty. Fetching initial data...","timestamp":"2026-04-13 09:49:07"}
+{"description":"Morning fetch - Business & Technology news","level":"info","message":"🚀 Starting scheduled fetch: MORNING","time":"2026-04-13T04:19:10.019Z","timestamp":"2026-04-13 09:49:10"}
+{"configs":4,"level":"info","message":"Fetching from NewsData.io","timestamp":"2026-04-13 09:49:10"}
+{"config":{"category":"business","country":"in","language":"en"},"error":"API request failed","level":"error","message":"NewsData.io fetch failed","timestamp":"2026-04-13 09:49:10"}
+{"articles":0,"config":{"category":"business","country":"in","language":"en"},"level":"info","message":"NewsData.io fetch complete","timestamp":"2026-04-13 09:49:10"}
+{"config":{"category":"technology","country":"in","language":"en"},"error":"API request failed","level":"error","message":"NewsData.io fetch failed","timestamp":"2026-04-13 09:49:10"}
+{"articles":0,"config":{"category":"technology","country":"in","language":"en"},"level":"info","message":"NewsData.io fetch complete","timestamp":"2026-04-13 09:49:10"}
+{"config":{"category":"business","country":"us","language":"en"},"error":"API request failed","level":"error","message":"NewsData.io fetch failed","timestamp":"2026-04-13 09:49:11"}
+{"articles":0,"config":{"category":"business","country":"us","language":"en"},"level":"info","message":"NewsData.io fetch complete","timestamp":"2026-04-13 09:49:11"}
+{"config":{"category":"technology","country":"us","language":"en"},"error":"API request failed","level":"error","message":"NewsData.io fetch failed","timestamp":"2026-04-13 09:49:11"}
+{"articles":0,"config":{"category":"technology","country":"us","language":"en"},"level":"info","message":"NewsData.io fetch complete","timestamp":"2026-04-13 09:49:11"}
+{"configs":4,"level":"info","message":"Fetching from NewsAPI.org","timestamp":"2026-04-13 09:49:11"}
+{"articles":0,"config":{"category":"business","country":"in","pageSize":100},"level":"info","message":"NewsAPI.org fetch complete","timestamp":"2026-04-13 09:49:11"}
+{"articles":0,"config":{"category":"technology","country":"in","pageSize":100},"level":"info","message":"NewsAPI.org fetch complete","timestamp":"2026-04-13 09:49:11"}
+{"articles":56,"config":{"category":"business","country":"us","pageSize":100},"level":"info","message":"NewsAPI.org fetch complete","timestamp":"2026-04-13 09:49:12"}
+{"articles":61,"config":{"category":"technology","country":"us","pageSize":100},"level":"info","message":"NewsAPI.org fetch complete","timestamp":"2026-04-13 09:49:12"}
+{"level":"info","message":"✅ Scheduled fetch completed: MORNING","saved":117,"time":"2026-04-13T04:19:12.993Z","timestamp":"2026-04-13 09:49:12","totalFetched":117,"updated":0}
+{"level":"info","message":"✅ Initial data fetch completed","timestamp":"2026-04-13 09:49:12"}
+{"level":"info","message":"SIGINT received: Starting graceful shutdown...","timestamp":"2026-04-13 09:53:28"}
+{"host":"hidden","level":"info","message":"Attempting MongoDB connection...","timestamp":"2026-04-13 09:57:22"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established","port":27017,"readyState":1,"timestamp":"2026-04-13 09:57:22"}
+{"database":"news_db","level":"info","message":"MongoDB connection opened","timestamp":"2026-04-13 09:57:22"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established successfully","readyState":1,"timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"Server is running in development mode on port 3000","timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"API Documentation: http://localhost:3000/","timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"Starting News Fetch Scheduler...","timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"🕐 Starting News Fetch Scheduler","schedules":5,"timestamp":"2026-04-13 09:57:22","timezone":"Asia/Kolkata"}
+{"description":"Early morning fetch - General & Breaking news","level":"info","message":"✓ Scheduled: EARLY_MORNING","time":"0 6 * * *","timestamp":"2026-04-13 09:57:22"}
+{"description":"Morning fetch - Business & Technology news","level":"info","message":"✓ Scheduled: MORNING","time":"0 9 * * *","timestamp":"2026-04-13 09:57:22"}
+{"description":"Afternoon fetch - Entertainment & Sports","level":"info","message":"✓ Scheduled: AFTERNOON","time":"0 13 * * *","timestamp":"2026-04-13 09:57:22"}
+{"description":"Evening fetch - Health & Science news","level":"info","message":"✓ Scheduled: EVENING","time":"0 18 * * *","timestamp":"2026-04-13 09:57:22"}
+{"description":"Night fetch - Latest updates & Politics","level":"info","message":"✓ Scheduled: NIGHT","time":"0 22 * * *","timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"📅 Fetch Schedule Overview:","times":[{"description":"Early morning fetch - General & Breaking news","name":"EARLY_MORNING","time":"0 6 * * *"},{"description":"Morning fetch - Business & Technology news","name":"MORNING","time":"0 9 * * *"},{"description":"Afternoon fetch - Entertainment & Sports","name":"AFTERNOON","time":"0 13 * * *"},{"description":"Evening fetch - Health & Science news","name":"EVENING","time":"0 18 * * *"},{"description":"Night fetch - Latest updates & Politics","name":"NIGHT","time":"0 22 * * *"}],"timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"💳 Estimated Daily API Credits:","newsApiOrg":{"estimated":16,"limit":100,"remaining":84},"newsDataIo":{"estimated":24,"limit":200,"remaining":176},"timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"🔍 Checking database for existing articles...","timestamp":"2026-04-13 09:57:22"}
+{"count":117,"level":"info","message":"✓ Database already contains articles","timestamp":"2026-04-13 09:57:22"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:00:48"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:00:48"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:00:48"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 13.156 ms - -","timestamp":"2026-04-13 10:00:48"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 27.962 ms - -","timestamp":"2026-04-13 10:00:48"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:00:48"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:00:48"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:00:48"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 6.067 ms - -","timestamp":"2026-04-13 10:00:48"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 13.514 ms - -","timestamp":"2026-04-13 10:00:48"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:00:59"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:00:59"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:00:59"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 5.030 ms - -","timestamp":"2026-04-13 10:00:59"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 9.878 ms - -","timestamp":"2026-04-13 10:00:59"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:01"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:01"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:01"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 6.103 ms - -","timestamp":"2026-04-13 10:01:01"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 11.146 ms - -","timestamp":"2026-04-13 10:01:01"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:02"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:02"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:02"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 5.968 ms - -","timestamp":"2026-04-13 10:01:02"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 10.109 ms - -","timestamp":"2026-04-13 10:01:02"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:05"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:05"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:05"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 4.952 ms - -","timestamp":"2026-04-13 10:01:05"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 8.373 ms - -","timestamp":"2026-04-13 10:01:05"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:07"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:07"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:07"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 5.698 ms - -","timestamp":"2026-04-13 10:01:07"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 9.776 ms - -","timestamp":"2026-04-13 10:01:07"}
+{"level":"info","message":"Fetching latest news","query":{"category":"entertainment","country":"in","limit":"20"},"timestamp":"2026-04-13 10:01:09"}
+{"filters":{"category":"entertainment","country":"in"},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:09"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:09"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 2.802 ms - -","timestamp":"2026-04-13 10:01:09"}
+{"level":"http","message":"GET /api/news/latest?country=in&category=entertainment&limit=20 200 19.429 ms - 199","timestamp":"2026-04-13 10:01:09"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:13"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:13"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:13"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 5.396 ms - -","timestamp":"2026-04-13 10:01:13"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 10.763 ms - -","timestamp":"2026-04-13 10:01:13"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:14"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:14"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:14"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 4.357 ms - -","timestamp":"2026-04-13 10:01:14"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 8.455 ms - -","timestamp":"2026-04-13 10:01:14"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:31"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:31"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:31"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 20.136 ms - -","timestamp":"2026-04-13 10:01:31"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 32.397 ms - -","timestamp":"2026-04-13 10:01:31"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:33"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:33"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:33"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 15.177 ms - -","timestamp":"2026-04-13 10:01:33"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 26.824 ms - -","timestamp":"2026-04-13 10:01:33"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:34"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:34"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:34"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 11.111 ms - -","timestamp":"2026-04-13 10:01:34"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 21.031 ms - -","timestamp":"2026-04-13 10:01:34"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:38"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:38"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:38"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 10.115 ms - -","timestamp":"2026-04-13 10:01:38"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 22.078 ms - -","timestamp":"2026-04-13 10:01:38"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:01:59"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:01:59"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:01:59"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 17.764 ms - -","timestamp":"2026-04-13 10:01:59"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 29.476 ms - -","timestamp":"2026-04-13 10:01:59"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:02:03"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:02:03"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:02:03"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 15.852 ms - -","timestamp":"2026-04-13 10:02:03"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 27.707 ms - -","timestamp":"2026-04-13 10:02:03"}
+{"level":"info","message":"Fetching latest news","query":{"limit":"50"},"timestamp":"2026-04-13 10:02:07"}
+{"filters":{},"level":"info","message":"Fetching latest news from database","timestamp":"2026-04-13 10:02:07"}
+{"level":"info","limit":6,"message":"Fetching trending news","timestamp":"2026-04-13 10:02:07"}
+{"level":"http","message":"GET /api/news/trending?limit=6 200 16.106 ms - -","timestamp":"2026-04-13 10:02:07"}
+{"level":"http","message":"GET /api/news/latest?limit=50 200 28.599 ms - -","timestamp":"2026-04-13 10:02:07"}
+{"host":"hidden","level":"info","message":"Attempting MongoDB connection...","timestamp":"2026-04-13 10:04:33"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established","port":27017,"readyState":1,"timestamp":"2026-04-13 10:04:33"}
+{"database":"news_db","level":"info","message":"MongoDB connection opened","timestamp":"2026-04-13 10:04:33"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established successfully","readyState":1,"timestamp":"2026-04-13 10:04:33"}
+{"level":"info","message":"Server is running in development mode on port 3000","timestamp":"2026-04-13 10:04:33"}
+{"level":"info","message":"API Documentation: http://localhost:3000/","timestamp":"2026-04-13 10:04:33"}
+{"level":"info","message":"Starting News Fetch Scheduler...","timestamp":"2026-04-13 10:04:33"}
+{"level":"info","message":"🕐 Starting News Fetch Scheduler","schedules":5,"timestamp":"2026-04-13 10:04:33","timezone":"Asia/Kolkata"}
+{"description":"Early morning fetch - General & Breaking news","level":"info","message":"✓ Scheduled: EARLY_MORNING","time":"0 6 * * *","timestamp":"2026-04-13 10:04:33"}
+{"description":"Morning fetch - Business & Technology news","level":"info","message":"✓ Scheduled: MORNING","time":"0 9 * * *","timestamp":"2026-04-13 10:04:33"}
+{"description":"Afternoon fetch - Entertainment & Sports","level":"info","message":"✓ Scheduled: AFTERNOON","time":"0 13 * * *","timestamp":"2026-04-13 10:04:33"}
+{"description":"Evening fetch - Health & Science news","level":"info","message":"✓ Scheduled: EVENING","time":"0 18 * * *","timestamp":"2026-04-13 10:04:33"}
+{"description":"Night fetch - Latest updates & Politics","level":"info","message":"✓ Scheduled: NIGHT","time":"0 22 * * *","timestamp":"2026-04-13 10:04:33"}
+{"level":"info","message":"📅 Fetch Schedule Overview:","times":[{"description":"Early morning fetch - General & Breaking news","name":"EARLY_MORNING","time":"0 6 * * *"},{"description":"Morning fetch - Business & Technology news","name":"MORNING","time":"0 9 * * *"},{"description":"Afternoon fetch - Entertainment & Sports","name":"AFTERNOON","time":"0 13 * * *"},{"description":"Evening fetch - Health & Science news","name":"EVENING","time":"0 18 * * *"},{"description":"Night fetch - Latest updates & Politics","name":"NIGHT","time":"0 22 * * *"}],"timestamp":"2026-04-13 10:04:33"}
+{"level":"info","message":"💳 Estimated Daily API Credits:","newsApiOrg":{"estimated":16,"limit":100,"remaining":84},"newsDataIo":{"estimated":24,"limit":200,"remaining":176},"timestamp":"2026-04-13 10:04:33"}
+{"level":"info","message":"🔍 Checking database for existing articles...","timestamp":"2026-04-13 10:04:33"}
+{"count":117,"level":"info","message":"✓ Database already contains articles","timestamp":"2026-04-13 10:04:33"}
+{"host":"hidden","level":"info","message":"Attempting MongoDB connection...","timestamp":"2026-04-13 10:04:44"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established","port":27017,"readyState":1,"timestamp":"2026-04-13 10:04:44"}
+{"database":"news_db","level":"info","message":"MongoDB connection opened","timestamp":"2026-04-13 10:04:44"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established successfully","readyState":1,"timestamp":"2026-04-13 10:04:44"}
+{"level":"info","message":"Server is running in development mode on port 3000","timestamp":"2026-04-13 10:04:44"}
+{"level":"info","message":"API Documentation: http://localhost:3000/","timestamp":"2026-04-13 10:04:44"}
+{"level":"info","message":"Starting News Fetch Scheduler...","timestamp":"2026-04-13 10:04:44"}
+{"level":"info","message":"🕐 Starting News Fetch Scheduler","schedules":5,"timestamp":"2026-04-13 10:04:44","timezone":"Asia/Kolkata"}
+{"description":"Early morning fetch - General & Breaking news","level":"info","message":"✓ Scheduled: EARLY_MORNING","time":"0 6 * * *","timestamp":"2026-04-13 10:04:44"}
+{"description":"Morning fetch - Business & Technology news","level":"info","message":"✓ Scheduled: MORNING","time":"0 9 * * *","timestamp":"2026-04-13 10:04:44"}
+{"description":"Afternoon fetch - Entertainment & Sports","level":"info","message":"✓ Scheduled: AFTERNOON","time":"0 13 * * *","timestamp":"2026-04-13 10:04:44"}
+{"description":"Evening fetch - Health & Science news","level":"info","message":"✓ Scheduled: EVENING","time":"0 18 * * *","timestamp":"2026-04-13 10:04:44"}
+{"description":"Night fetch - Latest updates & Politics","level":"info","message":"✓ Scheduled: NIGHT","time":"0 22 * * *","timestamp":"2026-04-13 10:04:44"}
+{"level":"info","message":"📅 Fetch Schedule Overview:","times":[{"description":"Early morning fetch - General & Breaking news","name":"EARLY_MORNING","time":"0 6 * * *"},{"description":"Morning fetch - Business & Technology news","name":"MORNING","time":"0 9 * * *"},{"description":"Afternoon fetch - Entertainment & Sports","name":"AFTERNOON","time":"0 13 * * *"},{"description":"Evening fetch - Health & Science news","name":"EVENING","time":"0 18 * * *"},{"description":"Night fetch - Latest updates & Politics","name":"NIGHT","time":"0 22 * * *"}],"timestamp":"2026-04-13 10:04:44"}
+{"level":"info","message":"💳 Estimated Daily API Credits:","newsApiOrg":{"estimated":16,"limit":100,"remaining":84},"newsDataIo":{"estimated":24,"limit":200,"remaining":176},"timestamp":"2026-04-13 10:04:44"}
+{"level":"info","message":"🔍 Checking database for existing articles...","timestamp":"2026-04-13 10:04:44"}
+{"count":117,"level":"info","message":"✓ Database already contains articles","timestamp":"2026-04-13 10:04:44"}
+{"level":"warn","message":"MongoDB connection disconnected","readyState":0,"timestamp":"2026-04-13 10:24:59"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established","port":27017,"readyState":1,"timestamp":"2026-04-13 10:25:16"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection reconnected","readyState":1,"timestamp":"2026-04-13 10:25:16"}
+{"database":"news_db","level":"info","message":"MongoDB connection opened","timestamp":"2026-04-13 10:25:16"}
+{"level":"info","message":"SIGINT received: Starting graceful shutdown...","timestamp":"2026-04-13 10:47:54"}
+{"host":"hidden","level":"info","message":"Attempting MongoDB connection...","timestamp":"2026-04-13 10:48:39"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established","port":27017,"readyState":1,"timestamp":"2026-04-13 10:48:39"}
+{"database":"news_db","level":"info","message":"MongoDB connection opened","timestamp":"2026-04-13 10:48:39"}
+{"database":"news_db","host":"localhost","level":"info","message":"MongoDB connection established successfully","readyState":1,"timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"Server is running in development mode on port 3000","timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"API Documentation: http://localhost:3000/","timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"Starting News Fetch Scheduler...","timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"🕐 Starting News Fetch Scheduler","schedules":5,"timestamp":"2026-04-13 10:48:39","timezone":"Asia/Kolkata"}
+{"description":"Early morning fetch - General & Breaking news","level":"info","message":"✓ Scheduled: EARLY_MORNING","time":"0 6 * * *","timestamp":"2026-04-13 10:48:39"}
+{"description":"Morning fetch - Business & Technology news","level":"info","message":"✓ Scheduled: MORNING","time":"0 9 * * *","timestamp":"2026-04-13 10:48:39"}
+{"description":"Afternoon fetch - Entertainment & Sports","level":"info","message":"✓ Scheduled: AFTERNOON","time":"0 13 * * *","timestamp":"2026-04-13 10:48:39"}
+{"description":"Evening fetch - Health & Science news","level":"info","message":"✓ Scheduled: EVENING","time":"0 18 * * *","timestamp":"2026-04-13 10:48:39"}
+{"description":"Night fetch - Latest updates & Politics","level":"info","message":"✓ Scheduled: NIGHT","time":"0 22 * * *","timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"📅 Fetch Schedule Overview:","times":[{"description":"Early morning fetch - General & Breaking news","name":"EARLY_MORNING","time":"0 6 * * *"},{"description":"Morning fetch - Business & Technology news","name":"MORNING","time":"0 9 * * *"},{"description":"Afternoon fetch - Entertainment & Sports","name":"AFTERNOON","time":"0 13 * * *"},{"description":"Evening fetch - Health & Science news","name":"EVENING","time":"0 18 * * *"},{"description":"Night fetch - Latest updates & Politics","name":"NIGHT","time":"0 22 * * *"}],"timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"💳 Estimated Daily API Credits:","newsApiOrg":{"estimated":16,"limit":100,"remaining":84},"newsDataIo":{"estimated":24,"limit":200,"remaining":176},"timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"🔍 Checking database for existing articles...","timestamp":"2026-04-13 10:48:39"}
+{"count":117,"level":"info","message":"✓ Database already contains articles","timestamp":"2026-04-13 10:48:39"}
+{"level":"info","message":"SIGINT received: Starting graceful shutdown...","timestamp":"2026-04-13 10:48:45"}
