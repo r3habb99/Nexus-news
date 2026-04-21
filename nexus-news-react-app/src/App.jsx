@@ -14,6 +14,7 @@ import {
   NewsGrid,
   Footer,
 } from "./components";
+import { Analytics } from "@vercel/analytics/react";
 
 /**
  * Main App Component
@@ -202,6 +203,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <Analytics />
     </div>
   );
 }
