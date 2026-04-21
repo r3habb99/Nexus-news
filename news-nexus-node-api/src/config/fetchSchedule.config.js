@@ -22,10 +22,7 @@ export const FETCH_SCHEDULE = {
       { category: "breaking", country: "us", language: "en" },
       { category: "world", language: "en" },
     ],
-    newsApiConfig: [
-      { country: "in", pageSize: 100 }, // Top headlines for India (includes general)
-      { country: "us", pageSize: 100 }, // Top headlines for US (includes general)
-    ],
+    newsApiConfig: [],
   },
 
   // Morning: 9:00 AM - Business & Technology
@@ -38,12 +35,7 @@ export const FETCH_SCHEDULE = {
       { category: "business", country: "us", language: "en" },
       { category: "technology", country: "us", language: "en" },
     ],
-    newsApiConfig: [
-      { country: "in", category: "business", pageSize: 100 },
-      { country: "in", category: "technology", pageSize: 100 },
-      { country: "us", category: "business", pageSize: 100 },
-      { country: "us", category: "technology", pageSize: 100 },
-    ],
+    newsApiConfig: [],
   },
 
   // Afternoon: 1:00 PM - Entertainment & Sports
@@ -56,12 +48,7 @@ export const FETCH_SCHEDULE = {
       { category: "sports", country: "us", language: "en" },
       { category: "sports", country: "in", language: "en" },
     ],
-    newsApiConfig: [
-      { country: "in", category: "entertainment", pageSize: 100 },
-      { country: "in", category: "sports", pageSize: 100 },
-      { country: "us", category: "entertainment", pageSize: 100 },
-      { country: "us", category: "sports", pageSize: 100 },
-    ],
+    newsApiConfig: [],
   },
 
   // Evening: 6:00 PM - Health & Science
@@ -76,12 +63,7 @@ export const FETCH_SCHEDULE = {
       { category: "politics", country: "in", language: "en" },
       { category: "politics", country: "us", language: "en" },
     ],
-    newsApiConfig: [
-      { country: "in", category: "health", pageSize: 100 },
-      { country: "us", category: "health", pageSize: 100 },
-      { country: "in", category: "science", pageSize: 100 },
-      { country: "us", category: "science", pageSize: 100 },
-    ],
+    newsApiConfig: [],
   },
 
   // Night: 10:00 PM - Latest updates & Politics
@@ -95,10 +77,7 @@ export const FETCH_SCHEDULE = {
       { category: "politics", country: "in", language: "en" },
       { category: "technology", country: "us", language: "en" },
     ],
-    newsApiConfig: [
-      { country: "in", pageSize: 100 }, // Latest headlines for India
-      { country: "us", pageSize: 100 }, // Latest headlines for US
-    ],
+    newsApiConfig: [],
   },
 };
 

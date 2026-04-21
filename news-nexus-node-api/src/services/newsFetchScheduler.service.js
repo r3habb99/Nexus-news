@@ -126,7 +126,13 @@ class NewsFetchScheduler {
     try {
       const result = await newsApiService.getLatestNews(config);
 
-      if (result?.results) {
+      // result from newsApiService has the format { success: true, data: {...} }
+      if (result?.data?.results) {
+        const normalized = result.data.results.map((article) =>
+          this.normalizeNewsDataArticle(article)
+        );
+        return normalized;
+      } else if (result?.results) { // fallback just in case
         const normalized = result.results.map((article) =>
           this.normalizeNewsDataArticle(article)
         );
